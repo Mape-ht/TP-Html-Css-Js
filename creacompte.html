@@ -20,7 +20,8 @@
     <header>
                 
         <h1><span>Banque du</span> peuple</h1>
-        <img src="image/logo2-bp.jpg" alt="logo Banque du Peuple">
+        <img src="image/cloche.png" alt="logo Banque du Peuple"class="img1">
+        <img src="image/envelope_maket.png" alt="logo Banque du Peuple" class="img2">
     
     </header>
     
@@ -41,176 +42,102 @@
             
         </aside>
 
-  
+    <!--une fois le fichier client créé, on peut créer le compte du Client-->
 
-<!--Le formulaire pour le login et mot de passe n'est pas utile dans ce cas. On sait que le Responsable de compte a déjà fait son login lors de l'ouverture de sa machine. Répéter le login alourdira le process
-    <div class="authentification"></div>
-            
-    <form action="authentifier">
-        <h2> Authentification </h2>
-        
-        <label for="login">Saisir votre login</label>
-            <input type="text" id="login" name="login" placeholder = "Login" required>
-        <label for="password">Saisir votre mot de passe</label>
-            <input type="text" id="password" name="password" placeholder = "Mot de passe" required>
-        <input type="submit" value = "Validez">
-        
-    </form>
-
-</div>-->
-
-
-
-<!--Tout nouvel enregistrement de client commence par le renseignement de l'Agence hote du client, mais ce numero est rempi d'avance donc on le montre en disabled 
-
-
-        <div class="creerClt">
+        <section class="Compte">
                 
-            <form action="nouveauClient">
-                <h2> Création nouveau Client </h2>
-        
-                <label for="regAgence"></label>
+            <form id="creacompteForm" onsubmit="return comptevalidate()" >
 
-                <select name="agence" id="regAgence">
-                    <option value="">--Veuillez indiquer l'Agence hote--</option>
-                        <option value="agence1">agence1</option>
-                        <option value="agence2">agence2</option>
-                        <option value="agence3">agence3</option>
-                        <option value="agence4">agence4</option>
-                </select>
-
-                <label for="numeroAgence">Identifiant de l'Agence</label>
-
-                    <input type="number" id="numeroAgence" name="numeroAgence" min="1" max="100"> <!-value="mp-dk-001" disabled>-->
-        
-        
-    
-        <!--identifier le type de client simple, salarié ou moral ----
-
-        
-                        
-                <label for="Clt"></label>
-
-                    <select name="client" id="clt">
-                        
-                        <option value="">--Veuillez indiquer le type du client--</option>
-                        <option value="client1">Client physique</option>
-                        <option value="client3">Client moral</option>
-                
-                    </select>
-
-
-    <!-remplir les informations du client ----
-
-                <label for="nomsClt">Noms Client</label>
-                    <input type="text" id="nomsClt" name="nomsClt" placeholder = "Noms du Client" required>
-                <label for="prenoms">Prénoms</label>
-                    <input type="text" id="prenoms" name="prenoms" placeholder = "Prénoms du Client" required>
-                <label for="adresse">Adresse</label>
-                    <input type="text" id="adresse" name="adresse" placeholder = "Adresse du Client" required>
-                <label for="email">email</label>
-                    <input type="text" id="email" name="email" placeholder = "Email du Client">
-                <label for="phone">Téléphone</label>
-                    <input type="text" id="phone" name="phone" placeholder = "Téléphone du Client" required>
-            
-        <!-s'enquerir si client salarié, si oui, remplir l'information de l'employeur --    
-                <label for="profession">Profession</label>
-                    <select name="profession" id="profession">
-                        <option value="">--Veuillez indiquer la profession du client--</option>
-                        <option value="profession1">none</option>
-                        <option value="profession2">salarié</option>
-                <label for="salaire">Salaire</label>
-                    <input type="text" id="salaire" name = "salaire" placeholder = "Salaire du Client">
-                <!-<label for="nomsEmployeur">Nom de l'employeur</label>
-                    <input type="text" id="nomsEmployeur" name="nomsEmployeur" placeholder = "Noms de l'Employeur" >--
-                <label for="numIdTravail">Numéro d'identification du Travailleur</label>
-                    <input type="text" id="numIdTravail" name="numIdTravail" placeholder = "Numero ident Travailleur">    
-                
-        <!-s'enquerir si client salarié, si oui, remplir l'information de l'employeur -- 
-                <label for="nomsEmployeur">Nom de l'employeur</label>
-                    <input type="text" id="nomsEmployeur" name="nomsEmployeur" placeholder = "Noms de l'Employeur">
-                <label for="raisonSo">Raison sociale</label>
-                    <input type="text" id="raisonSo" name="raisonSo" placeholder = "Raison sociale" >
-                <label for="adresseEmploi">Adresse de l'employeur</label>
-                    <input type="text" id="adresseEmploi" name="adresseEmploi" placeholder = "Adresse de l'Employeur" >
-                <label for="numIdEmployeur">Numéro d'identification de l'employeur</label>
-                    <input type="text" id="numIdEmployeur" name="numIdEmployeur" placeholder = "Numero ident Employeur" >
-
-            </form>
-            
-        </div>
-    <!-une fois le fichier client créé, on peut créer le compte du Client-->
-
-        <div class="creerCompte">
-            
-            <form action="nouveauCompte">
-        
-                <h2> Création Compte Client</h2>
-        
-                <label for="typeCompte">Indiquer le type de Compte</label><br/>
-
-                <select name="typeCompte" id="typeCompte">
-                    <option value="">--Veuillez indiquer le type de compte--</option>
-                        <option value="compte1">Compte Epargne</option>
-                        <option value="compte2">Compte Xeweel</option>
-                        <option value="compte3">Compte Courant</option>
-                        <option value="compte4">Compte Bloqué</option>
-                </select><br/>
-                
-                <!--------------------------Agence déja renseigné dans l'ouverture du client --
-                <label for="numeroAgence">Indiquer l'identifiant de l'Agence (1-100)</label><br/>
-
-                    <input type="number" id="numeroAgence" name="numeroAgence" min="1" max="100"><br>-->
-                <label for="numCompte">Numéro de Compte</label><br/>
-                    <input type="text" id="numCompte" name="numCompte" required ><br>
-                <label for="cle">Numéro Clé RIB</label><br/>
-                    <input type="text" id="cle" name="cle" required ><br>    
-                                                
-                
-                <label for="fraisOuv">Indiquer le taux du frais d'ouverture (0-5)</label><br/>
-
-                    <input type="number" id="fraisOuv" name="fraisOuv" required min="0" max="5"><br/>
-
-                <label for="remun">Indiquer le taux de la rémunération (0-5)</label><br/>
-
-                    <input type="number" id="remun" name="remun" required min="0" max="5"><br/>
-
-                <label for="agios">Indiquer le taux de l'agios (0-5)</label><br/>
-
-                    <input type="number" id="agios" name="agios" required min="0" max="5"><br/>
-
-                <label for="etatCompte">Indiquer l'etat du Compte</label><br/>
-
-                    <select name="etatCompte" id="etatCompte">
-                        <option value="">--Veuillez indiquer l'état du compte--</option>
-                            <option value="etatcompte1">Compte Actif</option>
-                            <option value="etatcompte2">Compte Fermé</option>
-                            <option value="etatcompte3">Compte Gelé</option>
-                            <option value="etatcompte4">Compte Bloqué temporaire</option>
-                            <option value="etatcompte5">Compte Archivé</option>                
-                            <option value="etatcompte6">Compte Supprimé</option>
-                    </select><br>  
+            <fieldset>
+                    <legend>Creation Compte</legend>
                     
-                <label for="dateOuv">Date d'ouverture du compte</label><br/>
-                    <input type="date" id="dateOuv" name="dateOuv" required><br/>
-                <label for="dateFerm">Date de fermeture definitive du compte</label><br/>
-                    <input type="date" id="dateFerm" name="dateFerm" ><br/>
-                <label for="dateTempo">Date de fermeture temporaire du compte</label><br/>                   
-                    <input type="date" name="dateTempo"><br/>
-                <label for="dateReOuv">Date de Réouverture du compte</label><br/>
-                    <input type="date" name="dateReOuv"><br/>
+                    <label for="typeCompte">Indiquer le type de Compte</label>
 
-        </form>
+                        <select name="typeCompte" id="typeCompte" >
+                            <option value="0">--Type de compte--</option>
+                                <option value="1">Compte Epargne et Xewel</option>
+                                <option value="2">Compte Courant</option>
+                                <option value="3">Compte Bloqué</option>
+                        </select><br><br/>
+                    
+                    <label for="numCompte">Numéro de Compte</label>
+                        <input type="text" id="numCompte" name="numCompte" disabled/></br>
+
+                    <label for="cle">Numéro Clé RIB</label>
+                        <input type="text" id="cle" name="cle" disabled/></br>  
+                        
+                                          
+                    <label for="initial">Depôt initial</label>
+                        <input type="texte" id="initial" name="initial" placeholder = "Depôt initial"/ required><br/>    
+                    
+                    <label for="fraisOuv">Frais Ouverture Compte</label>
+                        
+                        <select name="fraisOuv" id="fraisOuv" >
+                            <option value="0">--Frais ouverture Compte--</option>
+                                <option value="1">Frais Epargne et Xewel</option>
+                                <option value="2">Frais Courant</option>
+                                <option value="3">Frais Bloqué</option>
+                        </select><br><br/>
+
+
+
+
+                    <label for="remun">Intérêt Bancaire</label>
+                        
+                        <select name="remun" id="remun" >
+                            <option value="0">--Remuneration Compte--</option>
+                                <option value="1">Taux Epargne et Xewel</option>
+                                <option value="2">Taux Courant</option>
+                                <option value="3">Taux Bloqué</option>
+                        </select><br><br/>
+
+
+                    <label for="agios">Agios</label>
+
+                    <select name="agios" id="agios" >
+                        <option value="0">--Agios Compte--</option>
+                            <option value="1">Taux Epargne et Xewel</option>
+                            <option value="2">Taux Courant</option>
+                            <option value="3">Taux Bloqué</option>
+                    </select><br><br/>
+
+                        
+                    <!--<label for="etatCompte">Etat du Compte</label>
+
+                        <select name="etatCompte" id="etatCompte">
+                            <option value="">--------Indiquer Etat du compte--------</option>
+                                <option value="etatcompte1">Compte Actif</option>
+                                <option value="etatcompte2">Compte Fermé</option>
+                                <option value="etatcompte3">Compte Gelé</option>
+                                <option value="etatcompte4">Compte Bloqué temporaire</option>
+                                <option value="etatcompte5">Compte Archivé</option>                
+                                <option value="etatcompte6">Compte Supprimé</option>
+                        </select></br>-->  
+                        
+                    <label for="dateOuv">Date d'ouverture du compte</label>
+                        <input id="Aujourdhui" type="date" name="date"/><br/>
+                    <!--<label for="dateFerm">Date de fermeture definitive du compte</label><br/>
+                        <input type="date" id="dateFerm" name="dateFerm" ><br/>
+                    <label for="dateTempo">Date de fermeture temporaire du compte</label><br/>                   
+                        <input type="date" name="dateTempo"><br/>
+                    <label for="dateReOuv">Date de Réouverture du compte</label><br/>
+                        <input type="date" name="dateReOuv"><br/>-->
+                </fieldset>
+                    
+                    <div>
+                        <button type="submit" class = "bouttonV">VALIDER</button >
+                        <button type="reset" class = "bouttonA">ANNULER</button> 
                 
-        </div>
+                    </div>
+    
+            </form>
+    
+            </div>
     </main>
 
+            <script src="creacompte.js"></script>
 
-    <footer>
-        <input class = boutton type="submit" value="VALIDER">
-        <input class = boutton type="submit" value="ANNULER">
 
-    </footer>
 </body>
 </html>
 

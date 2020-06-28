@@ -9,7 +9,7 @@
     <meta name="description" content="Interface client Banque du Peuple"/>
     <meta name="keywords" content="Interface, client, banque du Peuple"/>
     <meta name="author" content="Marie Perle"/>
-
+    <script src="main.js"></script>
 
 </head>
 
@@ -19,12 +19,13 @@
         <header>
                     
             <h1><span>Banque du</span> peuple</h1>
-            <img src="image/logo2-bp.jpg" alt="logo Banque du Peuple">
+            <img src="image/cloche.png" alt="logo Banque du Peuple"class="img1">
+            <img src="image/envelope_maket.png" alt="logo Banque du Peuple" class="img2">
         
         </header>
         
         <main>
-            <!-----------------contiendra le ide barre et le contenu principal------>
+            <!-----------------contiendra le side barre et le contenu principal------>
 
             <!-----------------aside contiendra le dashboard en side barre gauche------>
 
@@ -58,23 +59,49 @@
 
 </div>-->
 
-        <div class="creerClt">
+            <section class="Clt">
                 
+                <form id="cltForm" onsubmit="return validate()" >
 
-                <h2> La Banque du Peuple </h2>
-                <p>vous accompagne pour la Tabaski</p>
-                <p>Contactez votre Responsable de Compte</p>
+                                
+                    <fieldset>
+                        <legend>Client Banque</legend>
+                        <label for="client">Client</label>
+                        
+                        <select required name="client" id="clientclient">
+                            <option value="0">-------- Client----------</option>
+                                <option value="1">Nouveau client</option>
+                                <option value="2">Déjà Client </option>
 
+                        </select><br></br>
+                    </fieldset><br></br>
                 
-    </main>
+                    <fieldset>
+                        <legend>Agence</legend>
+                        <label for="regAgence">Agence Compte Client</label>
 
+                        <select required name="agence" id="regAgence">
+                            <option value="0">------Indiquer l'Agence ------</option>
+                                <option value="1">agence1</option>
+                                <option value="2">agence2</option>
+                                
+                        </select><br><br/>
+                            
+                    </fieldset>
+                    
+                    <div>
+                        <button type="submit" class = "bouttonV">VALIDER</button >
+                        <button type="reset" class = "bouttonA">ANNULER</button>  
+            
+                    </div>
 
-    <footer>
-        <input class = boutton type="submit" value="VALIDER">
-        <input class = boutton type="submit" value="ANNULER">
+                </form>
 
-    </footer>
+            </div>
 
+        </main>
+        
 
+        <script src="main.js"></script>
 </body>
 </html>

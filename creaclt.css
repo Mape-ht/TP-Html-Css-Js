@@ -5,35 +5,48 @@ body{
     }
     
     header{
-    background-color: rgb(44, 44, 40, 0.9) ;
-    color : rgb(255, 255, 255, 0.9);
-    font-size: 1.2em;
-    padding: 20px 5px;
-    background-position: center center;
-    display: flex;
-    justify-content : space-around;
-    
+        background-color: rgb(44, 44, 40, 0.9) ;
+        color : rgb(255, 255, 255, 0.9);
+        font-size: 0.8em;
+        padding: 20px 5px;
+        background-position: center center;
+        height: 20px;
+        display: flex;
+        
+        
     }
-    
+        
     header h1 span{
-    color : rgb(91, 131, 255, 0.9)
-    
+        color : rgb(91, 131, 255, 0.9)
+        
     }
+    
     header h1{
-        order: 1;
-          }
-    
+        justify-content: flex-start;
+        width: 850px;
+        margin-top: -10px;
+     
+    }
+        
     header img{
-        width: 150px;
-        padding-top: 20px;
+        justify-content: flex-end;
+        width: 80px;
+        padding-left: 10px;
     }
     
+    header .img1{
+        order: 1;
+
+    } 
+
     main{
+        width: 1000px;
         display:flex;
-        padding : 40px;
+        padding : 10px;
         box-sizing: border-box;
         text-align: center;
         margin : 5px;
+        position: relative;
     }
 
     
@@ -42,7 +55,9 @@ body{
         font-size: 1.2em;
         margin : 2px;
         width: 300px;
+        margin-top: 100px;
         padding : 10px;
+       position: absolute;
         
     }
     
@@ -61,41 +76,72 @@ body{
         text-decoration: none;
         list-style: none;
         color : rgb(255, 255, 255, 0.9);
-           
-        
+         
     }
 
-    .creerClt{
+    main section form{
         justify-content: flex-end;
-        width: 800px;
-        float : right;
-        border: 2px solid rgb(91, 131, 255, 0.9);
+        width: 750px;
+        margin-left: 250px;
+        margin-right: 50px;
         padding : 5px 0;
-        margin-top: -20px;
+        text-align: end;
+        
         
     }
 
-    .creerClt h2{
-        font-size: 2em;
-        margin-top : 0;
-        padding-bottom: 10px;
-    }
+fieldset{
+display : inline ;
+text-align: right;
+padding-left: -50px;
 
-    footer{
-        text-align: center;
-        background-color: rgb(255, 255, 255, 0.9);
-        font-size: 0.8em;
-        margin: 0 0 0 400px;
-        margin-top : -30px;
-    }
 
-    footer .boutton{
-        margin-right : 30px;
-        color:rgb(91, 131, 255, 0.9);
+
+}
+
+    main section form input{
         border: 2px solid rgb(91, 131, 255, 0.9); 
         border-radius: 1em;
-        padding : 10px;
+        padding : 5px 10px;
+        margin : 5px 0;
+    }    
+
+    main section form select{
+        border: 2px solid rgb(91, 131, 255, 0.9); 
+        border-radius: 1em;
+        padding : 5px 50px;
+        margin : 5px 0;
+    }    
+
+
+    .bouttonV{
+        margin-top: 50px;    
+        margin-right : 100px;
+        margin-left: -500px;
+        padding: 5px 50px;
+        color:rgb(255, 255, 255, 0.9);
+        border: 2px solid rgb(91, 131, 255, 0.9); 
+        background-color: rgb(91, 131, 255, 0.9); ; 
+        border-radius: 1em;
+        
+}    
     
+.bouttonA{
+        margin-top : 50px;
+        margin-right: 100px;
+        margin-left: -80px;
+        padding : 5px 50px;
+        color:rgb(255,255,255, 0.9);
+        border: 2px solid rgb(255,99,71, 0.9);
+        background-color:rgb(255,99,71, 0.9) ;
+        border-radius: 1em;
+        
+        
+}
 
 
-    }
+/*#hide{
+        display: none; */
+
+}
+    
